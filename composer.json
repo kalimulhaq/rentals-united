@@ -1,0 +1,58 @@
+{
+    "name": "kalimulhaq/rentals-united",
+    "description": "Laravel package for Rentals United (rentalsunited.com) integration",
+    "keywords": [
+        "kalimulhaq",
+        "rentals-united"
+    ],
+    "homepage": "https://github.com/kalimulhaq/rentals-united",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Kalim ul Haq",
+            "email": "kalim.dir@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "guzzlehttp/guzzle": "^7.3",
+        "illuminate/support": "^8.0|^9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kalimulhaq\\RentalsUnited\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kalimulhaq\\RentalsUnited\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kalimulhaq\\RentalsUnited\\RentalsUnitedServiceProvider"
+            ],
+            "aliases": {
+                "RUDictionaryFacade": "Kalimulhaq\\RentalsUnited\\RentalsUnited\\Facades\\DictionaryFacade",
+                "RUPropertyFacade": "Kalimulhaq\\RentalsUnited\\RentalsUnited\\Facades\\PropertyFacade",
+                "RUReservationFacade": "Kalimulhaq\\RentalsUnited\\RentalsUnited\\Facades\\ReservationFacade",
+                "RULeadFacade": "Kalimulhaq\\RentalsUnited\\RentalsUnited\\Facades\\LeadFacade",
+                "RUUserFacade": "Kalimulhaq\\RentalsUnited\\RentalsUnited\\Facades\\UserFacade"
+            }
+        }
+    }
+}
